@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Inscrever-se</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>   
+            h1{
+                text-align: center;
+            }
+        </style> 
+        <script>
+            function criarJSON(){
+                
+                //obter info
+                const email = document.getElementById('email').value;
+                const senha = document.getElementById('senha').value;
+                
+                //criando objeto
+                const dados = {
+                    email: email,
+                    senha: senha
+                };
+                
+                //convertendo objeto para json
+                const json = JSON.stringify(dados);
+                
+                //fazendo a requisicao com a api
+                fetch('http://localhost:8080/mavenproject4/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type' : 'application/json'
+                    },
+                    body: JSON.stringify(dados)
+                }).then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                        }).catch (error => {
+                            console.log(error);
+                        });
+                
+                console.log((json.toString()));
+            }
+        </script>
+    </head>
+    <body>
+      <header>
+        <h1>LOGIN</h1>
+     </header>
+        <main>
+            <form id="formulario">
+                <label for="email" >Email:</label>
+                <input type="text" id="email"> <br>
+                <label for="senha" >Senha:</label>
+                <input type="text" id="senha"> <br>
+                <button type="button" onclick="criarJSON()">Entrar</button>
+            </form>
+            
+        </main>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+}
+header{
+    width: 100%;
+    background-color: blueviolet;
+    padding: 10px;
+    color: burlywood;
+
+}
+nav {
+    width: 100%;
+    background-color: blueviolet;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+nav a {
+    color: burlywood;
+    text-decoration: none;
+    margin-left: 80px;
+}
+nav a:hover{
+    color: aliceblue;
+}
+main {
+    width: 100%;
+    height: 450px;
+    padding: 10px;
+    background-color: blanchedalmond;
+}
+iframe{
+    border: 0px;
+    width:100%;
+    height: 400px;
+}
+footer{
+    background-color: blueviolet;
+    width: 100%;
+    padding: 5px;
+    color: burlywood;
+    height: 20px;
+}
+
+#apresentacao {
+    text-align: center;
+}
+#universoimg {
+   width: 70%;
+   margin-left: 150px;
+}
+
+#sobre{
+    text-align: center;
+}
